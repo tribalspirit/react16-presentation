@@ -13,9 +13,9 @@ const Menu = () => (
 
 // 
 const MenuLinks = () => ([
-    <a className='link' key='menu1' href='#1'>Articles</a>,
-    <a className='link' key='menu2' href='#1'>Articles2</a>,
-    <a className='link' key='menu3' href='#1'>Articles3</a>,
+    <li><a className='link' key='menu1' href='#1'>Articles</a></li>,
+    <li><a className='link' key='menu2' href='#1'>Articles2</a></li>,
+    <li><a className='link' key='menu3' href='#1'>Articles3</a></li>,
 ])
 
 export default MenuLinks

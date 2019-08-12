@@ -17,67 +17,80 @@ body {
   color: white;
 }
 
-.link {
-  color: #61dafb;
-  padding: 10px;
-  margin: 0 10px;
-  text-decoration: none;
+nav {
+  display: flex;
 }
 
-.link:hover {
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li {
+  margin: 0 20px;
+	display: inline-block;
+}
+
+nav a {
+	display:inline-block;
+	padding:0 10px;	
+	color:#61dafb;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
   background: #61dafb;
   color: #282c34;
   cursor: pointer;
 }
 
-.dropdown {
-  display: inline-block;
-  margin: 0 20px;
+nav ul ul {
+	display: none;
+	position: absolute; 
+  top: 60px; 
+  right: -100px;
 }
 
-.dropdown:hover > ul {
-  opacity: 1;
+nav ul li:hover > ul {
+	display:inherit;
 }
 
-.dropdown ul li {
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-  -webkit-transition: height .25s ease .1s;
-  -moz-transition: height .25s ease .1s;
-  -o-transition: height .25s ease .1s;
-  -ms-transition: height .25s ease .1s;
-  transition: height .25s ease .1s;
+nav ul ul li {
+	width:230px;
+	float:none;
+	display:list-item;
+	position: relative;
 }
 
-.dropdown:hover > ul li {
-  height: 36px;
-  overflow: visible;
-  padding: 0;
+.en, .cn, .jp {
+  cursor: pointer;
 }
-
-.dropdown ul li a {
-  width: 100px;
-  padding: 4px 0 4px 40px;
-  margin: 0;
-  border: none;
-  border-bottom: 1px solid #353539;
-}
-
-.dropdown ul li:last-child a {
-  border: none;
-}
-
-  /* Icons */
     
-.dropdown .en {
-  background: url(../assets/en.svg) no-repeat 6px center;
+.en:before {
+    content: url(../assets/en.svg);
+    display: inline-block;
+    width: 22px;
+    height: 10px;
+    margin: 0px 10px;
 }
 
-.dropdown .cn {
-  background: url(../assets/cn.svg) no-repeat 6px center;
+.cn:before {
+  content: url(../assets/cn.svg);
+  display: inline-block;
+  width: 22px;
+  height: 10px;
+  margin: 0px 10px;
 }
 
-.dropdown .jp {
-  background: url(../assets/jp.svg) no-repeat 6px center;
+
+.jp:before {
+  content: url(../assets/jp.svg);
+  display: inline-block;
+  width: 22px;
+  height: 10px;
+  margin: 0px 10px;
 }

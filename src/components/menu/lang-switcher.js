@@ -21,13 +21,16 @@ class LangSwitcher extends React.Component {
 
     _onClick = val => this.setState({ selected: val })
 
-    _renderOptions = options => options.map(i => (<li className={i.value} key={i.value}>{i.label}</li>))
+    _renderOptions = options => options.map(i => (<li className={i.value} key={i.value} onClick={() => this._onClick(i)}>{i.label}</li>))
 
     render() {
-        return (<div className='dropdown'>
-            <span className={this.state.selected.value}>{this.state.selected.label}</span>
-            <ul>{this._renderOptions(LANG_LIST)}</ul>
-        </div>)
+        return (
+            <li className={this.state.selected.value}><a href='#'>{this.state.selected.label}</a>
+                <ul>
+                    {this._renderOptions(LANG_LIST)}
+                </ul>        
+            </li>
+        )
     }
 }
 

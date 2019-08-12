@@ -4,11 +4,15 @@ import DateIndicator from './date-indicator'
 import LangSwitcher from './lang-switcher'
 
 const Menu = () => (
-    <div className='nav-bar'>
+    <nav>
+    <ul>
+        <li><span>This page was visited on: </span><DateIndicator /></li>
         <MenuLinks />
-        <span>Page visited on: <DateIndicator /></span>
+
         <LangSwitcher />
-    </div>
+
+    </ul>
+</nav>
 )
 
 export default Menu
